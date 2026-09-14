@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sitio estático para publicar información de mascotas perdidas y facilitar su reencuentro con sus familias.">
+  <title>Mascotas perdidas | Encontrémoslas</title>
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <p class="eyebrow">Red vecinal de ayuda</p>
+        <h1>Mascotas perdidas</h1>
+        <p class="tagline">Información clara para ayudar a que vuelvan a casa.</p>
+      </div>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#mantenedor">Quién mantiene el sitio</a></li>
+          <li>
+            <details class="category-menu">
+              <summary>Ver mascotas</summary>
+              <ul>
+                <li><a href="#perros">Perros perdidos</a></li>
+                <li><a href="#gatos">Gatos perdidos</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="container">
+    <section id="inicio" class="hero" aria-labelledby="titulo-inicio">
+      <div>
+        <p class="eyebrow">Ayudanos a difundir</p>
+        <h2 id="titulo-inicio">¿Viste una mascota perdida?</h2>
+        <p>
+          Seleccioná una categoría en <strong>“Ver mascotas”</strong> para consultar
+          las fotos, descripciones y fichas con información ampliada.
+        </p>
+        <p class="notice">
+          Si reconocés a una mascota, utilizá los datos de contacto indicados en su ficha.
+          No publiques datos personales innecesarios en redes sociales.
+        </p>
+      </div>
+      <div class="hero-card" aria-label="Información rápida">
+        <span class="hero-icon" aria-hidden="true">♥</span>
+        <p><strong>6 mascotas</strong><br>3 perros y 3 gatos</p>
+      </div>
+    </section>
+
+    <!--
+      La interacción de categorías se realiza únicamente con HTML + CSS:
+      los enlaces apuntan a cada sección y :target permite mostrarla sin JavaScript.
+    -->
+
+    <section id="perros" class="pet-category" aria-labelledby="titulo-perros">
+      <div class="section-heading">
+        <p class="eyebrow">Categoría 01</p>
+        <h2 id="titulo-perros">Perros perdidos</h2>
+        <p>Seleccioná una ficha para conocer sus características e información ampliada.</p>
+      </div>
+
+      <div class="pet-grid">
+        <article class="pet-card">
+          <figure>
+            <img src="img/placeholder.png" alt="Foto de Luna, perra perdida de tamaño mediano">
+          </figure>
+          <div class="pet-body">
+            <h3>Luna</h3>
+            <dl>
+              <div><dt>Especie</dt><dd>Perro</dd></div>
+              <div><dt>Descripción</dt><dd>Mediana, pelaje claro y collar rojo.</dd></div>
+              <div><dt>Zona</dt><dd>Plaza del barrio</dd></div>
+            </dl>
+            <a class="button" href="info/placeholder.pdf">Ver ficha de Luna (PDF)</a>
+          </div>
+        </article>
+
+        <article class="pet-card">
+          <figure>
+            <img src="img/placeholder.png" alt="Foto de Toby, perro perdido de pelaje marrón">
+          </figure>
+          <div class="pet-body">
+            <h3>Toby</h3>
+            <dl>
+              <div><dt>Especie</dt><dd>Perro</dd></div>
+              <div><dt>Descripción</dt><dd>Pelaje marrón y blanco, tamaño pequeño.</dd></div>
+              <div><dt>Zona</dt><dd>Zona de la estación</dd></div>
+            </dl>
+            <a class="button" href="info/placeholder.pdf">Ver ficha de Toby (PDF)</a>
+          </div>
+        </article>
+
+        <article class="pet-card">
+          <figure>
+            <img src="img/placeholder.png" alt="Foto de Bruno, perro perdido de pelaje negro y blanco">
+          </figure>
+          <div class="pet-body">
+            <h3>Bruno</h3>
+            <dl>
+              <div><dt>Especie</dt><dd>Perro</dd></div>
+              <div><dt>Descripción</dt><dd>Grande, pelaje negro y blanco, collar azul.</dd></div>
+              <div><dt>Zona</dt><dd>Parque municipal</dd></div>
+            </dl>
+            <a class="button" href="info/placeholder.pdf">Ver ficha de Bruno (PDF)</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="back-link"><a href="#inicio">↑ Volver al inicio</a></p>
+    </section>
+
+    <section id="gatos" class="pet-category" aria-labelledby="titulo-gatos">
+      <div class="section-heading">
+        <p class="eyebrow">Categoría 02</p>
+        <h2 id="titulo-gatos">Gatos perdidos</h2>
+        <p>Seleccioná una ficha para conocer sus características e información ampliada.</p>
+      </div>
+
+      <div class="pet-grid">
+        <article class="pet-card">
+          <figure>
+            <img src="img/placeholder.png" alt="Foto de Milo, gato perdido de pelaje atigrado">
+          </figure>
+          <div class="pet-body">
+            <h3>Milo</h3>
+            <dl>
+              <div><dt>Especie</dt><dd>Gato</dd></div>
+              <div><dt>Descripción</dt><dd>Atigrado gris, ojos verdes y collar amarillo.</dd></div>
+              <div><dt>Zona</dt><dd>Zona residencial</dd></div>
+            </dl>
+            <a class="button" href="info/placeholder.pdf">Ver ficha de Milo (PDF)</a>
+          </div>
+        </article>
+
+        <article class="pet-card">
+          <figure>
+            <img src="img/placeholder.png" alt="Foto de Nala, gata perdida de pelaje blanco y gris">
+          </figure>
+          <div class="pet-body">
+            <h3>Nala</h3>
+            <dl>
+              <div><dt>Especie</dt><dd>Gato</dd></div>
+              <div><dt>Descripción</dt><dd>Blanca y gris, tamaño pequeño, cola larga.</dd></div>
+              <div><dt>Zona</dt><dd>Alrededores de la escuela</dd></div>
+            </dl>
+            <a class="button" href="info/placeholder.pdf">Ver ficha de Nala (PDF)</a>
+          </div>
+        </article>
+
+        <article class="pet-card">
+          <figure>
+            <img src="img/placeholder.png" alt="Foto de Simba, gato perdido de pelaje naranja">
+          </figure>
+          <div class="pet-body">
+            <h3>Simba</h3>
+            <dl>
+              <div><dt>Especie</dt><dd>Gato</dd></div>
+              <div><dt>Descripción</dt><dd>Naranja atigrado, ojos amarillos y collar verde.</dd></div>
+              <div><dt>Zona</dt><dd>Centro del barrio</dd></div>
+            </dl>
+            <a class="button" href="info/placeholder.pdf">Ver ficha de Simba (PDF)</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="back-link"><a href="#inicio">↑ Volver al inicio</a></p>
+    </section>
+
+    <section id="contacto" class="info-section" aria-labelledby="titulo-contacto">
+      <div class="section-heading">
+        <p class="eyebrow">Comunicación</p>
+        <h2 id="titulo-contacto">Información de contacto</h2>
+        <p>Formulario estático para recopilar avisos. Para hacerlo operativo se necesita un servidor o servicio de formularios.</p>
+      </div>
+
+      <form class="contact-form" action="#" method="post">
+        <div class="form-grid">
+          <div class="field">
+            <label for="nombre">Nombre y apellido <span aria-hidden="true">*</span></label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Correo electrónico <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel">
+          </div>
+
+          <div class="field">
+            <label for="asunto">Motivo del contacto</label>
+            <select id="asunto" name="asunto">
+              <option value="avistamiento">Informar un avistamiento</option>
+              <option value="mascota-encontrada">Informar una mascota encontrada</option>
+              <option value="actualizacion">Solicitar una actualización</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="field field-full">
+            <label for="mensaje">Mensaje <span aria-hidden="true">*</span></label>
+            <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+          </div>
+        </div>
+
+        <button type="submit">Enviar información</button>
+        <p class="form-note">Los campos marcados con * son obligatorios. Este formulario es demostrativo porque el sitio funciona sin scripts ni servidor.</p>
+      </form>
+    </section>
+
+    <section id="mantenedor" class="info-section" aria-labelledby="titulo-mantenedor">
+      <div class="section-heading">
+        <p class="eyebrow">Sobre el proyecto</p>
+        <h2 id="titulo-mantenedor">Quién mantiene el sitio</h2>
+      </div>
+
+      <div class="maintainer-card">
+        <h3>Red Vecinal Encontrémoslas</h3>
+        <p>
+          Este sitio es mantenido por un grupo vecinal que recopila y difunde información
+          sobre mascotas perdidas, con el objetivo de facilitar su reencuentro con sus familias.
+        </p>
+        <ul>
+          <li>Actualización de fichas: según la información recibida.</li>
+          <li>Contacto: a través del formulario de esta página.</li>
+          <li>Privacidad: evitar publicar datos personales que no sean necesarios.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Mascotas perdidas</strong> · Sitio estático HTML + CSS</p>
+      <p>Diseñado con criterios de accesibilidad y adaptación a dispositivos móviles.</p>
+    </div>
+  </footer>
+</body>
+</html>
