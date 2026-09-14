@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotas Perdidas - Portal de Búsqueda y Reencuentro</title>
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+    <!-- Skip Link para Accesibilidad -->
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+    <!-- Header & Navegación Principal -->
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="logo">Red Mascotas Perdidas</h1>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#mascotas">Mascotas Perdidas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#mantenedor">Acerca del Sitio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Área Principal de Contenido -->
+    <main id="main-content" class="main-container">
+
+        <!-- Sección de Bienvenida -->
+        <section class="intro-section">
+            <h2>Portal de Alerta y Reencuentro de Mascotas</h2>
+            <p>Ayúdanos a reencontrar a las mascotas perdidas con sus familias. Revisa la lista por categoría, descarga los folletos informativos en PDF o ponte en contacto si tienes novedades.</p>
+        </section>
+
+        <!-- Sección: Catálogo de Mascotas -->
+        <section id="mascotas" class="section-card">
+            <h2>Listado de Mascotas Perdidas</h2>
+            <p class="instruction-text">Selecciona una categoría en la lista desplegable para filtrar los animales registrados:</p>
+
+            <!-- Desplegable Estático en CSS -->
+            <div class="filter-controls">
+                <label class="filter-label">Filtrar por categoría:</label>
+                <div class="dropdown-container">
+                    <nav class="dropdown-menu" aria-label="Filtro de categorías de mascotas">
+                        <ul class="nav-dropdown">
+                            <li class="dropdown-item">
+                                <span class="dropdown-title" tabindex="0" role="button" aria-expanded="false">Seleccionar Categoría ▼</span>
+                                <ul class="dropdown-options">
+                                    <li><a href="#perros">Perros Perdidos</a></li>
+                                    <li><a href="#gatos">Gatos Perdidos</a></li>
+                                    <li><a href="#todas">Mostrar Todos</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Galería de Mascotas -->
+            <div id="todas" class="pet-gallery-wrapper">
+                
+                <!-- Categoría: Perros -->
+                <div id="perros" class="category-block">
+                    <h3 class="category-header">Categoría: Perros</h3>
+                    <div class="pet-grid">
+                        
+                        <article class="pet-card">
+                            <div class="pet-image-box">
+                                <img src="img/placeholder.png" alt="Fotografía de Max, perro mestizo tamaño mediano, color marrón claro." class="pet-img">
+                            </div>
+                            <div class="pet-info">
+                                <h4>Max (Mestizo)</h4>
+                                <p><strong>Visto por última vez:</strong> Barrio Centro, 10 de Septiembre.</p>
+                                <p><strong>Descripción:</strong> Tamaño mediano, pelaje marrón claro, collar rojo sin chapa.</p>
+                                <div class="info-pdf-link">
+                                    <a href="info/placeholder.pdf" class="pdf-btn" target="_blank" aria-label="Descargar ficha en PDF sobre Max">+ Info PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="pet-card">
+                            <div class="pet-image-box">
+                                <img src="img/placeholder.png" alt="Fotografía de Luna, perrita Caniche Toy blanca." class="pet-img">
+                            </div>
+                            <div class="pet-info">
+                                <h4>Luna (Caniche)</h4>
+                                <p><strong>Visto por última vez:</strong> Parque Norte, 12 de Septiembre.</p>
+                                <p><strong>Descripción:</strong> Pequeña, pelaje blanco rizado, llevaba una cinta rosa.</p>
+                                <div class="info-pdf-link">
+                                    <a href="info/placeholder.pdf" class="pdf-btn" target="_blank" aria-label="Descargar ficha en PDF sobre Luna">+ Info PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="pet-card">
+                            <div class="pet-image-box">
+                                <img src="img/placeholder.png" alt="Fotografía de Rocky, perro Pastor Alemán." class="pet-img">
+                            </div>
+                            <div class="pet-info">
+                                <h4>Rocky (Pastor Alemán)</h4>
+                                <p><strong>Visto por última vez:</strong> Zona Industrial, 08 de Septiembre.</p>
+                                <p><strong>Descripción:</strong> Adulto, pelaje negro y fuego, orejas erguidas con microchip.</p>
+                                <div class="info-pdf-link">
+                                    <a href="info/placeholder.pdf" class="pdf-btn" target="_blank" aria-label="Descargar ficha en PDF sobre Rocky">+ Info PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- Categoría: Gatos -->
+                <div id="gatos" class="category-block">
+                    <h3 class="category-header">Categoría: Gatos</h3>
+                    <div class="pet-grid">
+                        
+                        <article class="pet-card">
+                            <div class="pet-image-box">
+                                <img src="img/placeholder.png" alt="Fotografía de Misi, gato atigrado gris con ojos verdes." class="pet-img">
+                            </div>
+                            <div class="pet-info">
+                                <h4>Misi (Atigrado)</h4>
+                                <p><strong>Visto por última vez:</strong> Av. San Martín 450, 11 de Septiembre.</p>
+                                <p><strong>Descripción:</strong> Pelaje gris atigrado, ojos verdes brillantes.</p>
+                                <div class="info-pdf-link">
+                                    <a href="info/placeholder.pdf" class="pdf-btn" target="_blank" aria-label="Descargar ficha en PDF sobre Misi">+ Info PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="pet-card">
+                            <div class="pet-image-box">
+                                <img src="img/placeholder.png" alt="Fotografía de Pelusa, gata Siamesa." class="pet-img">
+                            </div>
+                            <div class="pet-info">
+                                <h4>Pelusa (Siamés)</h4>
+                                <p><strong>Visto por última vez:</strong> Barrio Jardín, 13 de Septiembre.</p>
+                                <p><strong>Descripción:</strong> Crema con puntas oscuras y ojos azules intensos.</p>
+                                <div class="info-pdf-link">
+                                    <a href="info/placeholder.pdf" class="pdf-btn" target="_blank" aria-label="Descargar ficha en PDF sobre Pelusa">+ Info PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="pet-card">
+                            <div class="pet-image-box">
+                                <img src="img/placeholder.png" alt="Fotografía de Simón, gato negro de pelo corto." class="pet-img">
+                            </div>
+                            <div class="pet-info">
+                                <h4>Simón (Negro de pelo corto)</h4>
+                                <p><strong>Visto por última vez:</strong> Calle Belgrano y 12, 09 de Septiembre.</p>
+                                <p><strong>Descripción:</strong> Totalmente negro, ojos amarillos, muy dócil.</p>
+                                <div class="info-pdf-link">
+                                    <a href="info/placeholder.pdf" class="pdf-btn" target="_blank" aria-label="Descargar ficha en PDF sobre Simón">+ Info PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección: Formulario de Contacto -->
+        <section id="contacto" class="section-card">
+            <h2>Información de Contacto</h2>
+            <p>Si has visto a alguna de las mascotas o tienes información útil, por favor completa el siguiente formulario:</p>
+            
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo <span class="required" aria-hidden="true">*</span></label>
+                    <input type="text" id="nombre" name="nombre" required aria-required="true" autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono / WhatsApp de Contacto <span class="required" aria-hidden="true">*</span></label>
+                    <input type="tel" id="telefono" name="telefono" required aria-required="true" autocomplete="tel">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico <span class="required" aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="mascota-ref">Mascota sobre la que reportas <span class="required" aria-hidden="true">*</span></label>
+                    <select id="mascota-ref" name="mascota-ref" required aria-required="true">
+                        <option value="">-- Seleccionar Mascota --</option>
+                        <option value="max">Max (Perro Mestizo)</option>
+                        <option value="luna">Luna (Perra Caniche)</option>
+                        <option value="rocky">Rocky (Perro Pastor Alemán)</option>
+                        <option value="misi">Misi (Gato Atigrado)</option>
+                        <option value="pelusa">Pelusa (Gata Siamesa)</option>
+                        <option value="simon">Simón (Gato Negro)</option>
+                        <option value="otro">Otra mascota no listada</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Detalles / Ubicación / Mensaje <span class="required" aria-hidden="true">*</span></label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true" placeholder="Indica la ubicación exacta, hora o estado en que viste a la mascota..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Enviar Reporte de Información</button>
+            </form>
+        </section>
+
+        <!-- Sección: Datos del Mantenedor -->
+        <section id="mantenedor" class="section-card">
+            <h2>Información de Quien Mantiene el Sitio</h2>
+            <div class="maintainer-info">
+                <p>Este portal es mantenido sin fines de lucro por la organización voluntaria <strong>Red de Reencuentro Animal</strong> en colaboración con refugios locales.</p>
+                <ul class="maintainer-list">
+                    <li><strong>Coordinación General:</strong> Equipo Voluntario de Alerta Animal</li>
+                    <li><strong>Soporte Técnico:</strong> Desarrollo Accesible e Inclusivo</li>
+                    <li><strong>Correo Institucional:</strong> contacto@redmascotasperdidas.org</li>
+                    <li><strong>Atención Telefónica de Urgencia:</strong> 0800-555-MASCOTA (6272)</li>
+                    <li><strong>Horario de Operación:</strong> 24 horas recibiendo reportes comunitarios</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Red Mascotas Perdidas. Diseñado cumpliendo pautas de accesibilidad web WCAG 2.1 AA.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

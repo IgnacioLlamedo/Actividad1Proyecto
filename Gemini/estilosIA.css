@@ -1,0 +1,359 @@
+/* ==========================================================================
+   ESTILOSIA.CSS - SITIO ESTATICO RESPONSIVE Y ACCESIBLE (WCAG 2.1 AA)
+   ========================================================================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #1a365d;        /* Azul marino oscuro (Contraste alto) */
+    --primary-light: #2b6cb0;        /* Azul medio accesible */
+    --bg-main: #f7fafc;              /* Fondo general claro */
+    --bg-card: #ffffff;              /* Fondo blanco para tarjetas */
+    --text-color: #1a202c;           /* Texto oscuro de alta legibilidad */
+    --border-color: #2b6cb0;        /* Borde azul según figura */
+    --padding-color: #f0f4f8;       /* Fondo relleno de imagen */
+    --img-border-color: #a0aec0;    /* Marco de foto */
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --max-width: 1200px;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-main);
+}
+
+/* Enlace de salto para teclado (Accesibilidad) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #000000;
+    color: #ffffff;
+    padding: 10px 15px;
+    z-index: 1000;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Indicador de Enfoque Teclado Visible */
+a:focus, button:focus, input:focus, select:focus, textarea:focus, [tabindex="0"]:focus {
+    outline: 3px solid #d69e2e;
+    outline-offset: 3px;
+}
+
+/* Cabecera y Navegación */
+.site-header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 1.25rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.header-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.logo {
+    font-size: 1.75rem;
+    float: left;
+}
+
+.main-nav {
+    float: right;
+}
+
+.main-nav ul {
+    list-style: none;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+}
+
+.main-nav a:hover, .main-nav a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .logo, .main-nav {
+        float: none;
+        text-align: center;
+    }
+    .main-nav li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Estructura Principal */
+.main-container {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 1.25rem;
+}
+
+.intro-section {
+    background-color: #ebf8ff;
+    border-left: 6px solid var(--primary-light);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+.section-card {
+    background-color: var(--bg-card);
+    border: 1px solid #e2e8f0;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-card h2 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-light);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Menu Desplegable Estático */
+.filter-controls {
+    margin-bottom: 2rem;
+    background-color: #edf2f7;
+    padding: 1.25rem;
+    border-radius: 6px;
+}
+
+.filter-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.nav-dropdown {
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    width: 280px;
+}
+
+.dropdown-title {
+    display: block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border: 2px solid var(--primary-color);
+    list-style: none;
+    z-index: 100;
+}
+
+.dropdown-options li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.dropdown-options li a:hover, .dropdown-options li a:focus {
+    background-color: #ebf8ff;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.nav-dropdown:hover .dropdown-options,
+.nav-dropdown:focus-within .dropdown-options {
+    display: block;
+}
+
+/* Filtro por :target de CSS (100% Estático) */
+#perros:target ~ #gatos { display: none; }
+#gatos:target ~ #perros { display: none; }
+:target.category-block { display: block !important; }
+
+.category-header {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    background-color: #e2e8f0;
+    padding: 0.5rem 1rem;
+    border-left: 5px solid var(--primary-color);
+    margin: 1.5rem 0 1rem 0;
+}
+
+/* Tarjetas de Mascotas con Borde y Relleno Estilo Modelo */
+.pet-grid {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.pet-card {
+    display: table-cell;
+    vertical-align: top;
+    width: 33.333%;
+    padding: 1.25rem;
+    background: #ffffff;
+    border: 2px solid var(--border-color); /* BORDE EXTERIOR EN NAVE */
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 900px) {
+    .pet-card {
+        display: block;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+.pet-image-box {
+    background-color: var(--padding-color); /* RELLENO / MARCO INTERIOR */
+    border: 1px solid var(--img-border-color);
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.pet-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #cbd5e0;
+    background-color: #ffffff;
+}
+
+.pet-info h4 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-pdf-link {
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #cbd5e0;
+}
+
+.pdf-btn {
+    display: inline-block;
+    color: var(--primary-light);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.05rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--primary-light);
+    border-radius: 4px;
+}
+
+.pdf-btn:hover, .pdf-btn:focus {
+    background-color: var(--primary-light);
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Formulario Accesible */
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+.required {
+    color: #c53030;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 2px solid #718096;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.85rem 1.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover, .submit-btn:focus {
+    background-color: var(--primary-light);
+    text-decoration: underline;
+}
+
+/* Mantenedor y Pie de Página */
+.maintainer-list {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+}
+
+.site-footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+    border-top: 4px solid var(--primary-light);
+}
